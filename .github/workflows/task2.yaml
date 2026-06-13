@@ -22,4 +22,4 @@ jobs:
           python -m pip install --upgrade pip
 
       - name: Run tests
-        run: python -m unittest test_main.py
+        run: python -m unittest python-task2/test_main.py
