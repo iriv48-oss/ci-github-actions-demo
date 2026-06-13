@@ -22,4 +22,6 @@ jobs:
           python -m pip install --upgrade pip
 
       - name: Run tests
-        run: python -m unittest python-task2/test_main.py
+        working-directory: python-task2
+        run: |
+          python -m unittest discover -v
