@@ -1,4 +1,4 @@
-name: Python Tests
+name: multi Python Tests 
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         python: [3.7,3.8,3.9,3.10]
-        os: ubuntu-latest
+        os: [ubuntu-latest]
 
     steps:
       - name: Check out the code
