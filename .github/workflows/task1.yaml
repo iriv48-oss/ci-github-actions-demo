@@ -8,5 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+
       - name: Print Hello CI message
         run: echo "Hello, CI with GitHub Actions!"
