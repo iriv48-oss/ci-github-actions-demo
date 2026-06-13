@@ -1,30 +1,12 @@
-name: Task 1-Basic GitHub Actions Workflow
+name: CI Demo
 
 on:
   push:
-    branches:
-      - main
-    
-permissions:
-  pull-requests: write
-  issues: write
-  
+
 jobs:
-  comment:
+  hello-ci:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v5
-
-      - name: Create a comment on the PR
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: "Hello, CI with GitHub Actions!."
-            })
+      - name: Print Hello CI message
+        run: echo "Hello, CI with GitHub Actions!"
